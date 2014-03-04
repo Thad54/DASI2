@@ -1,0 +1,13 @@
+C:\Users\Martin\Downloads\GLtest\RSA-Encryption\RSA-Encryption\bin\Debug\RSA-Encryption.exe.config
+C:\Users\Martin\Downloads\GLtest\RSA-Encryption\RSA-Encryption\bin\Debug\RSA-Encryption.exe
+C:\Users\Martin\Downloads\GLtest\RSA-Encryption\RSA-Encryption\bin\Debug\RSA-Encryption.pdb
+C:\Users\Martin\Downloads\GLtest\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption.csprojResolveAssemblyReference.cache
+C:\Users\Martin\Downloads\GLtest\RSA-Encryption\RSA-Encryption\obj\Debug\MainWindow.baml
+C:\Users\Martin\Downloads\GLtest\RSA-Encryption\RSA-Encryption\obj\Debug\MainWindow.g.cs
+C:\Users\Martin\Downloads\GLtest\RSA-Encryption\RSA-Encryption\obj\Debug\App.g.cs
+C:\Users\Martin\Downloads\GLtest\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption_MarkupCompile.cache
+C:\Users\Martin\Downloads\GLtest\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption.g.resources
+C:\Users\Martin\Downloads\GLtest\RSA-Encryption\RSA-Encryption\obj\Debug\RSA_Encryption.Properties.Resources.resources
+C:\Users\Martin\Downloads\GLtest\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption.csproj.GenerateResource.Cache
+C:\Users\Martin\Downloads\GLtest\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption.exe
+C:\Users\Martin\Downloads\GLtest\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption.pdb
