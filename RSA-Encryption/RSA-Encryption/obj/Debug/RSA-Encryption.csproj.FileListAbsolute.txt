@@ -11,3 +11,16 @@ C:\Users\Martin\Downloads\GLtest\RSA-Encryption\RSA-Encryption\obj\Debug\RSA_Enc
 C:\Users\Martin\Downloads\GLtest\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption.csproj.GenerateResource.Cache
 C:\Users\Martin\Downloads\GLtest\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption.exe
 C:\Users\Martin\Downloads\GLtest\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption.pdb
+C:\Users\Dreydn\Documents\GitHub\dasi2\RSA-Encryption\RSA-Encryption\bin\Debug\RSA-Encryption.exe.config
+C:\Users\Dreydn\Documents\GitHub\dasi2\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption.exe
+C:\Users\Dreydn\Documents\GitHub\dasi2\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption.pdb
+C:\Users\Dreydn\Documents\GitHub\dasi2\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption.csprojResolveAssemblyReference.cache
+C:\Users\Dreydn\Documents\GitHub\dasi2\RSA-Encryption\RSA-Encryption\obj\Debug\MainWindow.baml
+C:\Users\Dreydn\Documents\GitHub\dasi2\RSA-Encryption\RSA-Encryption\obj\Debug\MainWindow.g.cs
+C:\Users\Dreydn\Documents\GitHub\dasi2\RSA-Encryption\RSA-Encryption\obj\Debug\App.g.cs
+C:\Users\Dreydn\Documents\GitHub\dasi2\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption_MarkupCompile.cache
+C:\Users\Dreydn\Documents\GitHub\dasi2\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption.g.resources
+C:\Users\Dreydn\Documents\GitHub\dasi2\RSA-Encryption\RSA-Encryption\obj\Debug\RSA_Encryption.Properties.Resources.resources
+C:\Users\Dreydn\Documents\GitHub\dasi2\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption.csproj.GenerateResource.Cache
+C:\Users\Dreydn\Documents\GitHub\dasi2\RSA-Encryption\RSA-Encryption\bin\Debug\RSA-Encryption.exe
+C:\Users\Dreydn\Documents\GitHub\dasi2\RSA-Encryption\RSA-Encryption\bin\Debug\RSA-Encryption.pdb

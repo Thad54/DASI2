@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,8 @@ namespace RSA_Encryption
     /// </summary>
     public partial class MainWindow : Window
     {
-        string input;
+
+        RSACryptoServiceProvider rsa = null;
         public MainWindow()
         {
             InitializeComponent();
@@ -45,10 +47,35 @@ namespace RSA_Encryption
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var rsa = new RSACryptoServiceProvider();
-            RSAParameters RSAKeyInfo = rsa.ExportParameters(false);
+            rsa = new RSACryptoServiceProvider(2048);
 
-            //string input = 
+            var privKey = rsa.ExportParameters(true);
+
+            var pubKey = rsa.ExportParameters(false);
+
+            string pubKeyStr;
+            string privKeyStr;
+
+            var sw = new StringWriter();
+
+            var xs = new System.Xml.Serialization.XmlSerializer(typeof(RSAParameters));
+
+            xs.Serialize(sw, pubKey);
+            pubKeyStr = sw.ToString();
+  //          publicKey.Text = pubKeyStr;
+
+            xs.Serialize(sw, privKey);
+            privKeyStr = sw.ToString();
+ //           privateKey.Text = privKeyStr;
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (rsa == null)
+            {
+                MessageBox.Show("You have to load or generate keys before you can utilize the encryption mechanism", "Error");
+            }
 
 
         }
