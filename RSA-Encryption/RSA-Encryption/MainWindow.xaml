@@ -1,22 +1,26 @@
 ﻿<Window x:Class="RSA_Encryption.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="594" Width="583">
-    <Grid Margin="0,0,2,-20">
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="36,30,0,0" TextWrapping="Wrap" Text="Select private key file" VerticalAlignment="Top" Width="437" Name="FileTextBox"/>
-        <Button Content="Browse" HorizontalAlignment="Left" Margin="478,30,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Button Content="Generate Keys" HorizontalAlignment="Left" Margin="23,134,0,0" VerticalAlignment="Top" Width="99" Click="Button_Click_1"/>
-        <TextBox HorizontalAlignment="Left" Height="142" Margin="0,356,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="184"/>
-        <Label Content="Input Text" HorizontalAlignment="Left" Margin="10,301,0,0" VerticalAlignment="Top"/>
-        <Label Content="Result Text" HorizontalAlignment="Left" Margin="219,318,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="140" Margin="219,367,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="195"/>
-        <Button Content="Encrypt" HorizontalAlignment="Left" Margin="446,389,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="36,58,0,0" TextWrapping="Wrap" Text="Select public key file" VerticalAlignment="Top" Width="437" x:Name="FileTextBox_Copy"/>
-        <Button Content="Browse" HorizontalAlignment="Left" Margin="478,57,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        Title="RSA Encryption" Height="549.821" Width="583">
+    <Grid Margin="0,0,1.8,22.6">
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="36,30,0,0" TextWrapping="Wrap" Text="Select private and public key package" VerticalAlignment="Top" Width="437" Name="FileTextBox"/>
+        <Button Content="Browse" HorizontalAlignment="Left" Margin="478,30,0,0" VerticalAlignment="Top" Width="75" Click="privKey_Import"/>
+        <Button Content="Generate Keys" HorizontalAlignment="Left" Margin="23,134,0,0" VerticalAlignment="Top" Width="99" Click="Generate_Key"/>
+        <TextBox HorizontalAlignment="Left" Height="142" Margin="10,300,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="328" Name="inputBox"/>
+        <Label Content="Input Text" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top"/>
+        <Label Content="Result Text" HorizontalAlignment="Left" Margin="358,269,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="140" Margin="358,300,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="195" Name="resultBox"/>
+        <Button Content="Encrypt" HorizontalAlignment="Left" Margin="10,470,0,0" VerticalAlignment="Top" Width="75" Click="encrypt"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="36,58,0,0" TextWrapping="Wrap" Text="Select public key" VerticalAlignment="Top" Width="437" x:Name="FileTextBox_Copy"/>
+        <Button Content="Browse" HorizontalAlignment="Left" Margin="478,57,0,0" VerticalAlignment="Top" Width="75" Click="pubKey_Import"/>
         <GroupBox Header="Load Keys" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="97" Width="553"/>
-        <GroupBox Header="GroupBox" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Height="134" Width="553"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="23,189,0,0" TextWrapping="Wrap" Text="Select private key file" VerticalAlignment="Top" Width="437"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="23,161,0,0" TextWrapping="Wrap" Text="Select private key file" VerticalAlignment="Top" Width="437"/>
+        <GroupBox Header="" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Height="134" Width="553">
+        </GroupBox>
+        <Button Content="Export private and public key package" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="234" Margin="23,183,0,0" Click="export_privKey"/>
+        <Button Content="Decrypt" HorizontalAlignment="Left" Margin="119,470,0,0" VerticalAlignment="Top" Width="75" Click="decrypt"/>
+        <Button Content="Export public key" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="234" Margin="23,209,0,0" Click="export_pubKey"/>
+        <Button Content="Export result" HorizontalAlignment="Left" Margin="340,469,0,0" VerticalAlignment="Top" Width="86" Click="export_result"/>
+        <Button Content="Import text" HorizontalAlignment="Left" Margin="224,470,0,0" VerticalAlignment="Top" Width="86" Click="import_text"/>
     </Grid>
 
 </Window>
