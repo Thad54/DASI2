@@ -1,0 +1,13 @@
+Dokumentation
+
+Es wurde der von .net angebotenene RSA Crypto Service Provider verwendet.
+ 
+DAs Programm verwendet 2048 bit keys um eine relative datensicherheit zu gewahrleisten.
+
+Beim Verschlusseln muss auch noch darauf geachtet werden das man mit rsa nur kleine dateien verschlusseln sollta das die rsa verschlusseung recht aufwendig ist
+.net lasst mit einem 2048 bit z.b. nur daten mit maximal 245 byte zu verschlusselung zu.
+
+Fur den das Key Managment (import, export) wurde xml als datenformat gewahlt da diese mit dem .net xml serializer sehr einfach zu erreichen ist.
+
+der resultat text wird als basis 64 string ausgeben damit er als einfaches text file transportiert werden kann.
+Dies ist notwendig da die rsa klasse nur byte arrays ver-/entschluesseln kann. 

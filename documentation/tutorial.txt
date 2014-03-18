@@ -1,0 +1,37 @@
+Anleitung zum RSA VErschlusselungstool
+
+Simple Ver / Entschlusselung
+
+Zunacht benoetigt das Programm einen RSA key damit die encrypt und decrypt Funktionenverwendet werden koennen.
+	
+Diese konnen entweder neu generiert werden mit "Generate Keys".
+Oder man bereits vorhandene keys mittels "Browse" nebem dem Select keys importieren.
+
+Nun kann man in das Input Textfeld etwas hineinschreiben, oder mittels "Import Text"
+aus einer Datei importieren (.txt Dateien).
+
+Danach wird der Text mit "Encrypt" verschlusselt und im Result Feld ausgegeben.
+Diesen Text konnen sie dann auch mittels "Export Result" als .txt Datei speichern.
+
+ACHTUNG: RSA ist nicht fur lange texte gedacht und daher konnen maximal 245 byte auf einmal verschlusselt werden.
+
+Wenn sie nun einen verschlusselten Text in das Input Textfeld importieren kann diese
+mit "Decrypt" wieder entschlusselt werden.
+
+Key Managment
+
+Damit andere ebenfalls derartig Text ver- und entschluesseln koennen muessen sie die
+keys zunachst exportieren.
+
+Dazu konnen sie entweder der private und public key exportieren oder nur den public key.
+
+Mit dem public key alleine konnen Texte nur ver- aber nicht entschluesselt werden.
+
+WICHTIG: Geben sie niemals ihren private Key an unsichere Parteien weiter.
+
+Diese Keys koennen dann wieder importiert werden um mittels "Browse".
+
+HINWEIS: Die private key .xml beinhaltet auch den public key; dieser muss nicht seperat
+importiert werden.
+
+Wenn sie mehrere Keys importieren werden die alten immer wieder ueberschrieben.

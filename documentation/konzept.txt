@@ -1,0 +1,7 @@
+Ziel ist es ein Programm zu schreiben,
+dass mittels einer RSA Verschluesselung einen sicheren Datenaustausch zwischen mehreren 
+Personen erlaubt.
+
+ - 	Dazu soll das Porgramm RSA Schluessel erzeugen, exportieren und importieren koennen.
+ - 	Und Text ver- bzw. entschluesseln koennen; wobei das Verschluesselungsresultat auch 
+	in einem transportablen format angeboten werden soll.
