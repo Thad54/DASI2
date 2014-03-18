@@ -24,7 +24,7 @@ namespace RSA_Encryption
     {
       
         RSACryptoServiceProvider rsa = null;
-        bool priv = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -48,22 +48,44 @@ namespace RSA_Encryption
 
                 StreamReader reader = new StreamReader(filename);
 
-                RSAParameters privParam = (RSAParameters)xs.Deserialize(reader);
-
-                if (rsa == null)
+                try
                 {
-                    rsa = new RSACryptoServiceProvider(2048);
+
+                    RSAParameters privParam = (RSAParameters)xs.Deserialize(reader);
+
+                    if (rsa == null)
+                    {
+                        rsa = new RSACryptoServiceProvider(2048);
+                    }
+
+
+                    rsa.ImportParameters(privParam);
+                }
+                catch (CryptographicException)
+                {
+                    MessageBox.Show("The imported file is not a valid RSA key.", "Error");
+                    rsa = null;
+                }
+                catch (InvalidOperationException)
+                {
+                    MessageBox.Show("The imported file is not a valid RSA key.", "Error");
+                    rsa = null;
                 }
 
-                rsa.ImportParameters(privParam);
-                priv = true;
             }
         }
 
         private void Generate_Key(object sender, RoutedEventArgs e)
         {
-            rsa = new RSACryptoServiceProvider(2048);
-            priv = true;
+            try
+            {
+                rsa = new RSACryptoServiceProvider(2048);
+            }
+            catch (CryptographicException)
+            {
+                MessageBox.Show("There was an error during the key generation. Please try again", "Error");
+                rsa = null;
+            }
 
 
         }
@@ -101,11 +123,12 @@ namespace RSA_Encryption
 
         private void decrypt(object sender, RoutedEventArgs e)
         {
-            if (rsa == null || priv == false)
+            if (rsa == null)
             {
                 MessageBox.Show("You have to load or generate keys before you can utilize the decryption mechanism", "Error");
                 return;
             }
+
             if (inputBox.Text == "")
             {
                 MessageBox.Show("The input textbox is empty", "Error");
@@ -135,6 +158,12 @@ namespace RSA_Encryption
         private void export_privKey(object sender, RoutedEventArgs e)
         {
 
+            if (rsa == null)
+            {
+                MessageBox.Show("You have to load or generate keys before you can export them", "Error");
+                return;
+            }
+
             var dlg = new Microsoft.Win32.SaveFileDialog();
             dlg.FileName = "rsa_priv&pubKey";
             dlg.DefaultExt = ".xml";
@@ -160,10 +189,17 @@ namespace RSA_Encryption
 
         private void export_pubKey(object sender, RoutedEventArgs e)
         {
+            if (rsa == null)
+            {
+                MessageBox.Show("You have to load or generate keys before you can export them", "Error");
+                return;
+            }
+
             var dlg = new Microsoft.Win32.SaveFileDialog();
             dlg.FileName = "rsa_pubKey";
             dlg.DefaultExt = ".xml";
             dlg.Filter = "Xml documents (.xml)|*.xml";
+
 
             Nullable<bool> result = dlg.ShowDialog();
 
@@ -178,38 +214,6 @@ namespace RSA_Encryption
 
                     xs.Serialize(writer, pubKey);
                 }
-
-            }
-        }
-
-        private void pubKey_Import(object sender, RoutedEventArgs e)
-        {
-            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-
-            dlg.DefaultExt = ".txt";
-            /// dlg.Filter = "Text documents (.txt|*.txt)";
-
-            Nullable<bool> result = dlg.ShowDialog();
-
-            if (result == true)
-            {
-                string filename = dlg.FileName;
-                FileTextBox.Text = filename;
-
-                var xs = new System.Xml.Serialization.XmlSerializer(typeof(RSAParameters));
-                /* using(System.Xml.XmlReader reader = System.Xml.XmlReader.Create(filename)){
-                     privParam = (RSAParameters)xs.Deserialize(reader);
-                 }*/
-                StreamReader reader = new StreamReader(filename);
-
-                RSAParameters privParam = (RSAParameters)xs.Deserialize(reader);
-
-                if (rsa == null)
-                {
-                    rsa = new RSACryptoServiceProvider(2048);
-                }
-
-                rsa.ImportParameters(privParam);
 
             }
         }
